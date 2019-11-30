@@ -1,5 +1,7 @@
 # SWAMI KARUPPASWAMI THUNNAI
 
+import os
+from pathlib import Path
 import requests
 import numpy as np
 from keras.models import load_model
@@ -10,7 +12,8 @@ class GenderClassifier:
 
 
 	def __init__(self):
-		self.model = load_model("gender_classifier/gender_v2.h5")
+		home = str(Path.home())
+		self.model = load_model(os.path.join(home, "gender.h5"))
 
 	def classify_gender(self, image_path):
 		image = load_img(image_path, color_mode="grayscale", target_size=(100, 100))

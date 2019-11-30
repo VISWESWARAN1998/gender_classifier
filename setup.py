@@ -8,8 +8,8 @@ def read():
 	return content
 
 setuptools.setup(
-     name="gender_classifier",  
-     version="1.0",
+     name="genderClassifier",  
+     version="1.8",
      author="Visweswaran N",
      author_email="visweswaran.nagasivam98@gmail.com",
      description="A simple gender classifier",
@@ -19,7 +19,6 @@ setuptools.setup(
      packages=["gender_classifier"],
      install_requires=["numpy", "tensorflow", "keras"],
      include_package_data=True,
-     data_files = [('', ['gender_classifier/gender_v2.h5'])],
      classifiers=[
          "Programming Language :: Python :: 3",
          "License :: OSI Approved :: MIT License",
